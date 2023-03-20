@@ -23,7 +23,15 @@ https://m.wikihow.com/Read-Binary
 */
 
 function binToDec(binString){
- 
+  let result = 0;
+  let count = 0
+  for(let i = binString.length - 1; i >= 0; i--){
+    if(binString[i] == 0){
+      result += Math.pow(2, count); 
+    }
+    count++;
+  }
+  return result;
 }
 
 
