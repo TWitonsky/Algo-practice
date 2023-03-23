@@ -16,7 +16,23 @@ function should handle 0 <= strs.length
 */
 
 const longestCommonPrefix = (strs) => {
-  
+  if(strs.length === 0 ) return '';
+  //set the result to the first item and then will take things off
+  let result = strs[0];
+  for(let i = 1; i <strs.length; i++){
+    while(strs[i].indexOf(result) != 0){
+      result = result.substring(0, result.length - 1);
+    }
+  }
+  return result;
 }
+
+
+let strs = ["flower","flow","flight"];
+console.log(longestCommonPrefix(strs)); //Output: "fl"
+
+
+let strs2 = ["dog","racecar","car"];
+console.log(longestCommonPrefix(strs2)); //Output: ''
 
 module.exports = {longestCommonPrefix};
