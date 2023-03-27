@@ -9,9 +9,10 @@ reverseInt(-12) --> -21
 */
 
 function reverseInt(x){
+  //need to hold on to whether it was negative at a point
   let negative = Math.sign(x);
-
-  Math.abs(x);
+  //need to get rid of the negative
+  x = Math.abs(x);
   //puts its to string, splits each part, reverses it, rejoins.
   let result = x.toString().split('').reverse().join('');
   //The above wont get the - so need to times it by a -1 or 1, Javascript math.sign does that
