@@ -13,7 +13,28 @@ fizzbuzz(16);
 */
 
 const fizzbuzz = num => {
-  
+  let result = [];
+  for(let i = 1; i == num; i++){
+    console.log(i);
+    if(i % 3 == 0 && i % 5 == 0){
+      result.push('fizzbuzz');
+    }
+    else if(i % 3 == 0){
+      result.push('fizz');
+    }
+    else if(i % 5 == 0){
+      result.push('buzz')
+    }
+    else{
+      result.push('fizzbuzz')
+    }
+  }
+  console.log(result);
+  return result
 }
+
+let done = fizzbuzz(16);
+
+console.log(done);
 
 module.exports = { fizzbuzz }

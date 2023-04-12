@@ -1,7 +1,7 @@
 /* 
 Write an algorithm that converts an array to a linked list. Return the head node. 
 */
-const { Node, LinkedList } = require('../linkedList');
+const { Node } = require('../linkedList');
 
 const arrayToLL = (arr) => {
   let node, temp;
