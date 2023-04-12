@@ -14,7 +14,18 @@ Output: [1,2,3]
 */
 
 const deleteDuplicates = (head) => {
-  
+  let temp = head;
+  while(temp.next != null && temp != null){
+    if(temp.val == head.next.val){
+      temp.next = temp.next.next;
+    }
+    else{
+     temp = temp.next
+    }
+  }
+  return head;
 };
+
+
 
 module.exports = { deleteDuplicates };
